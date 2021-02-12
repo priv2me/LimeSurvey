@@ -174,6 +174,13 @@ class QuestionAdministrationController extends LSBaseController
         App()->session['FileManagerContext'] = "edit:survey:{$question->sid}";
         initKcfinder();
 
+        if (Yii::app()->session['templateeditormode'] !== 'default') {
+            $sTemplateEditorMode = Yii::app()->session['templateeditormode'];
+        } else {
+            $sTemplateEditorMode = getGlobalSetting('templateeditormode');
+        }
+        $aData['sTemplateEditorMode'] = $sTemplateEditorMode;
+
         $questionTemplate = 'core';
         if ($question->qid !== 0) {
             $questionTemplate = QuestionAttribute::getQuestionTemplateValue($question->qid);

@@ -79,7 +79,7 @@
                                 'rows' => '10',
                                 'cols' => '40',
                                 'data-filetype' => 'javascript',
-                                'class' => 'form-control', // . $sTemplateEditorMode,
+                                'class' => 'ace'. $sTemplateEditorMode,
                             ]
                         ); ?>
                         <p class="alert well">
@@ -92,3 +92,11 @@
         <?php endforeach; ?>
     </div>
 </div> 
+
+<script>
+jQuery(document).on('ready', function () {
+    $('.ace:not(.none)').ace({
+        'mode' : 'javascript'
+    });
+});
+</script>
