@@ -122,6 +122,7 @@
                                     'question'        => $oQuestion,
                                     'aStructureArray' => $aQuestionTypeGroups,
                                     'showScriptField' => $showScriptField,
+                                    'sTemplateEditorMode' => $sTemplateEditorMode
                                 ]
                             ); ?>
                         </div>

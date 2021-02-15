@@ -79,7 +79,7 @@
                                 'rows' => '10',
                                 'cols' => '40',
                                 'data-filetype' => 'javascript',
-                                'class' => 'ace'. $sTemplateEditorMode,
+                                'class' => 'ace' . $sTemplateEditorMode,
                             ]
                         ); ?>
                         <p class="alert well">
